@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\LipService.csproj": {}
+    "C:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\LipService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\LipService.csproj": {
+    "C:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\LipService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\LipService.csproj",
+        "projectUniqueName": "C:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\LipService.csproj",
         "projectName": "LipService",
-        "projectPath": "C:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\LipService.csproj",
-        "packagesPath": "C:\\Users\\jwain\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\obj\\",
+        "projectPath": "C:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\LipService.csproj",
+        "packagesPath": "C:\\Users\\adams\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jwain\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\adams\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
