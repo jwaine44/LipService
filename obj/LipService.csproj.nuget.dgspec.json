@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\LipService.csproj": {}
+    "C:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\LipService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\LipService.csproj": {
+    "C:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\LipService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\LipService.csproj",
+        "projectUniqueName": "C:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\LipService.csproj",
         "projectName": "LipService",
-        "projectPath": "C:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\LipService.csproj",
-        "packagesPath": "C:\\Users\\adams\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\obj\\",
+        "projectPath": "C:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\LipService.csproj",
+        "packagesPath": "C:\\Users\\jwain\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\adams\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jwain\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -39,12 +39,18 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.3, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[6.0.1, )"
+            },
+            "TweetinviAPI": {
+              "target": "Package",
+              "version": "[5.0.4, )"
             }
           },
           "imports": [
