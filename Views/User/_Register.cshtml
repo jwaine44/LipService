@@ -1,0 +1,43 @@
+@model User
+
+<h3>Register</h3>
+<form asp-controller = "User" asp-action = "Register" method = "POST">
+    <div>
+        <div>
+            <label asp-for = "FirstName"></label>
+            <input asp-for = "FirstName">
+            <span asp-validation-for = "FirstName"></span>
+        </div>
+    </div>
+
+    <div>
+        <label asp-for = "LastName"></label>
+        <input asp-for = "LastName">
+        <span asp-validation-for = "LastName"></span>
+    </div>
+
+    <div>
+        <label asp-for = "Username"></label>
+        <input asp-for = "Username">
+        <span asp-validation-for = "Username"></span>
+    </div>
+    
+    <div>
+        <label asp-for = "Email"></label>
+        <input asp-for = "Email">
+        <span asp-validation-for = "Email"></span>
+    </div>
+
+    <div>
+        <label asp-for = "Password"></label>
+        <input asp-for = "Password">
+        <span asp-validation-for = "Password"></span>
+    </div>
+
+    <div>
+        <label asp-for = "ConfirmPassword"></label>
+        <input asp-for = "ConfirmPassword">
+        <span asp-validation-for = "ConfirmPassword"></span>
+    </div>
+    <button>Register</button>
+</form>
