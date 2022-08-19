@@ -79,11 +79,11 @@ public class UserController : Controller
             return Index();
         }
 
-        User? dbUser = _context.Users.FirstOrDefault(user => user.Email == loginUser.LoginEmail);
+        User? dbUser = _context.Users.FirstOrDefault(user => user.Username == loginUser.LoginUsername);
 
         if(dbUser == null)
         {
-            ModelState.AddModelError("LoginEmail", "Invalid entry!");
+            ModelState.AddModelError("LoginUsername", "Invalid entry!");
             return Index();
         }
 
