@@ -90,3 +90,5 @@ C:\Users\adams\Desktop\CodingDojo\CodingDojoAssignments\LipService\obj\Debug\net
 C:\Users\adams\Desktop\CodingDojo\CodingDojoAssignments\LipService\obj\Debug\net6.0\ref\LipService.dll
 C:\Users\jwain\Documents\Coding\C#\LipService\bin\Debug\net6.0\DotNetEnv.dll
 C:\Users\jwain\Documents\Coding\C#\LipService\bin\Debug\net6.0\Sprache.dll
+C:\Users\adams\Desktop\CodingDojo\CodingDojoAssignments\LipService\bin\Debug\net6.0\DotNetEnv.dll
+C:\Users\adams\Desktop\CodingDojo\CodingDojoAssignments\LipService\bin\Debug\net6.0\Sprache.dll
