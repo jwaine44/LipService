@@ -25,6 +25,59 @@ public class UserController : Controller
         }
     }
 
+    private string ApiKey
+    {
+        get
+        {
+            DotNetEnv.Env.Load();
+            var message = Environment.GetEnvironmentVariable("API_KEY");
+            if(message != null)
+            {
+                return message;
+            }
+        return "";
+        }
+    }
+    private string SecretKey
+    {
+        get
+        {
+            DotNetEnv.Env.Load();
+            var message = Environment.GetEnvironmentVariable("SECRET_API_KEY");
+            if(message != null)
+            {
+                return message;
+            }
+        return "";
+        }
+    }
+    private string AccessToken
+    {
+        get
+        {
+            DotNetEnv.Env.Load();
+            var message = Environment.GetEnvironmentVariable("ACCESS_TOKEN");
+            if(message != null)
+            {
+                return message;
+            }
+        return "";
+        }
+    }
+    private string SecretAccess
+    {
+        get
+        {
+            DotNetEnv.Env.Load();
+            var message = Environment.GetEnvironmentVariable("SECRET_ACCESS");
+            if(message != null)
+            {
+                return message;
+            }
+        return "";
+        }
+    }
+
     private LipServiceContext _context;
 
     public UserController(LipServiceContext context)
