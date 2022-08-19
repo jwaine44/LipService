@@ -35,7 +35,7 @@ public class UserController : Controller
             {
                 return message;
             }
-        return "";
+            return "";
         }
     }
     private string SecretKey
@@ -48,7 +48,7 @@ public class UserController : Controller
             {
                 return message;
             }
-        return "";
+            return "";
         }
     }
     private string AccessToken
@@ -61,7 +61,7 @@ public class UserController : Controller
             {
                 return message;
             }
-        return "";
+            return "";
         }
     }
     private string SecretAccess
@@ -74,7 +74,7 @@ public class UserController : Controller
             {
                 return message;
             }
-        return "";
+            return "";
         }
     }
 
