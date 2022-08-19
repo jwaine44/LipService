@@ -16303,6 +16303,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\Views\\Shared\\_Login.cshtml",
+      "TargetPath": "Views\\Shared\\_Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -16323,18 +16328,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\Views\\User\\_Login.cshtml",
-      "TargetPath": "Views\\User\\_Login.cshtml",
+      "FilePath": "c:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\Views\\Shared\\_Register.cshtml",
+      "TargetPath": "Views\\Shared\\_Register.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\Views\\User\\_Register.cshtml",
-      "TargetPath": "Views\\User\\_Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\Views\\User\\Index.cshtml",
-      "TargetPath": "Views\\User\\Index.cshtml",
+      "FilePath": "c:\\Users\\adams\\Desktop\\CodingDojo\\CodingDojoAssignments\\LipService\\Views\\Shared\\Index.cshtml",
+      "TargetPath": "Views\\Shared\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

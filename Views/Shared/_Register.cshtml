@@ -1,0 +1,36 @@
+  @model User
+  
+  <form class="shadow p-3 rounded" asp-controller="User" asp-action="Create" method="POST">
+
+    <div class="mb-3">
+      <label asp-for="FirstName"></label>
+      <span asp-validation-for="FirstName" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="FirstName">
+    </div>
+    <div class="mb-3">
+      <label asp-for="LastName"></label>
+      <span asp-validation-for="LastName" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="LastName">
+    </div>
+    <div class="mb-3">
+      <label asp-for="Username"></label>
+      <span asp-validation-for="Username" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="Username">
+    </div>
+    <div class="mb-3">
+      <label asp-for="Password"></label>
+      <span asp-validation-for="Password" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="Password">
+    </div>
+    <div class="mb-3">
+      <label asp-for="ConfirmPassword"></label>
+      <span asp-validation-for="ConfirmPassword" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="ConfirmPassword">
+    </div>
+    <button class="btn btn-success">Regiser</button>
+  </form>

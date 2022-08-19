@@ -1,0 +1,19 @@
+@model LoginUser
+
+<form class="shadow p-3 rounded" asp-controller="User" asp-action="Login" method="POST">
+
+    <div class="mb-3">
+      <label asp-for="LoginUsername"></label>
+      <span asp-validation-for="LoginUsername" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="LoginUsername">
+    </div>
+    <div class="mb-3">
+      <label asp-for="LoginPassword"></label>
+      <span asp-validation-for="LoginPassword" class="text-danger font-weight-bold">
+      </span>
+      <input class="form-control" asp-for="LoginPassword">
+    </div>
+
+    <button class="btn btn-success">Register</button>
+  </form>
