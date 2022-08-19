@@ -88,10 +88,10 @@ public class UserController : Controller
     [HttpGet("")]
     public IActionResult Index()
     {
-        if(loggedIn)
-        {
-            return RedirectToAction();
-        }
+        // if(loggedIn)
+        // {
+        //     return RedirectToAction();
+        // }
         
         return View("Index");
     }
