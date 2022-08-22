@@ -13,7 +13,7 @@
     <div class="d-flex justify-content-around">
         @foreach(Song s in Model)
         {
-            <p>@s.SongName</p>
+            <a asp-controller="Song" asp-action="OneSong" asp-route-songId="@s.SongId"><p>@s.SongName</p></a>
         }
     </div>
 </body>

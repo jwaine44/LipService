@@ -90,6 +90,60 @@ public class SongController : Controller
         _context = context;
     }
 
+// -----------------------------VIEW ROUTES---------------------------------------------
+
+
+    [HttpGet("/songs")]
+    public IActionResult AllSongs()
+    {
+        // if(!loggedIn)
+        // {
+        //     return RedirectToAction("Index", "User");
+        // }
+
+        List<Song> allSongs = _context.Songs.ToList();
+
+        return View("AllSongs", allSongs);
+    }
+
+    [HttpGet("/songs/{songId}")]
+    public IActionResult OneSong(int songId){
+        Song? dbSong = _context.Songs.FirstOrDefault(s => s.SongId == songId);
+
+        if(dbSong == null){
+            return RedirectToAction("AllSongs");
+        }
+        string temp = "";
+        char space = ' ';
+        List<List<string>> lyricsList = new List<List<string>>();
+        List<string> lyricsSubList = new List<string>();
+
+
+        for(int i = 0; i< dbSong.Lyrics.Length; i++){
+            if(dbSong.Lyrics[i] == space)
+            {
+                lyricsSubList.Add(temp);
+                if(lyricsSubList.Count == 9)
+                {
+                    lyricsList.Add(lyricsSubList);
+                    lyricsSubList = new List<string>();  
+                }
+                temp = "";
+                i++;
+            }
+            if(i == dbSong.Lyrics.Length -1)
+            {
+                temp += dbSong.Lyrics[i];
+                lyricsSubList.Add(temp);
+                lyricsList.Add(lyricsSubList);
+            }
+            temp += dbSong.Lyrics[i];
+        }
+
+        ViewBag.LyricsList = lyricsList;
+        return View("OneSong", dbSong);
+    }
+
     [HttpGet("/get/tweets/{lyric}")]
     public async Task<IActionResult> GetTweets(string lyric){
         Query newQuery = new Query();
@@ -126,6 +180,8 @@ public class SongController : Controller
         return View("AddSong");
     }
 
+
+// -------------------------------------POST ROUTES-------------------------------------
     [HttpPost("/songs/create")]
     public IActionResult CreateSong(Song newSong)
     {
@@ -138,29 +194,21 @@ public class SongController : Controller
         {
             return AddSong();
         }
+        // Console.WriteLine(newSong.Lyrics);
+        newSong.Lyrics = newSong.Lyrics.Replace("\n", "").Replace("\r", " ").Replace("\r\n", "");
+        // newSong.Lyrics.Trim();
+        // Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        // Console.WriteLine(newSong.Lyrics);
 
         if(uid != null)
         {
             newSong.UserId = (int)uid;
         }
-        
         _context.Songs.Add(newSong);
         _context.SaveChanges();
         
         return RedirectToAction("Dashboard", "User");
     }
 
-    [HttpGet("/songs")]
-    public IActionResult AllSongs()
-    {
-        // if(!loggedIn)
-        // {
-        //     return RedirectToAction("Index", "User");
-        // }
-
-        List<Song> allSongs = _context.Songs.ToList();
-
-        return View("AllSongs", allSongs);
-    }
 
 }

@@ -1,0 +1,27 @@
+@model Song
+
+<h1>@Model.SongName</h1>
+
+@{
+    string songLine = "";
+    @* Complete line of the song *@
+    string query = "";
+
+}
+@foreach (List<string> lyricSublist in ViewBag.LyricsList)
+{
+    Console.WriteLine(lyricSublist.Count);
+        foreach(string lyric in lyricSublist)
+        {
+            @* Inside of array of 9 words *@
+
+            songLine += (lyric + " ");
+           
+        }
+
+    query = songLine.Replace("and", " ").Replace("And", " ");
+    <div class="d-flex w-75">
+   <a class="btn btn-success mb-2" asp-controller="Song" asp-action="GetTweets" asp-route-lyric="@query">@songLine</a>
+    </div>
+    songLine = "";
+}
