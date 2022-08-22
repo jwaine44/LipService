@@ -99,16 +99,17 @@ public class SongController : Controller
 
         var tweetList = await UserClient.SearchV2.SearchTweetsAsync(newQuery.Lyric);
         
-        List<TweetV2> ListTweets = new List<TweetV2>();
+        List<LipTweet> ListTweets = new List<LipTweet>();
 
         foreach (var tweet in tweetList.Tweets)
         {
             TweetV2 newTweet = tweet;
-            if(newTweet.PossiblySensitive == true)
-            {
-            ListTweets.Add(newTweet);
+            var author = await UserClient.UsersV2.GetUserByIdAsync(newTweet.AuthorId);
+            LipTweet newLipTweet = new LipTweet();
+            newLipTweet.Tweet = newTweet;
+            newLipTweet.Author = author;
+            ListTweets.Add(newLipTweet);
 
-            }
         }
 
 
