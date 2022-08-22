@@ -16343,6 +16343,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\Views\\Song\\AllSongs.cshtml",
+      "TargetPath": "Views\\Song\\AllSongs.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\jwain\\Documents\\Coding\\C#\\LipService\\Views\\Song\\AllTweets.cshtml",
       "TargetPath": "Views\\Song\\AllTweets.cshtml",
       "FileKind": "mvc"

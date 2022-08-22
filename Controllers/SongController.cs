@@ -150,4 +150,17 @@ public class SongController : Controller
         return RedirectToAction("Dashboard", "User");
     }
 
+    [HttpGet("/songs")]
+    public IActionResult AllSongs()
+    {
+        // if(!loggedIn)
+        // {
+        //     return RedirectToAction("Index", "User");
+        // }
+
+        List<Song> allSongs = _context.Songs.ToList();
+
+        return View("AllSongs", allSongs);
+    }
+
 }

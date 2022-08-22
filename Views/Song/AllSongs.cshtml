@@ -1,0 +1,20 @@
+@model List<Song>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LipService</title>
+</head>
+<body>
+    <h1>Lip Service</h1>
+    <h4>Here are all your songs!</h4>
+    <div class="d-flex justify-content-around">
+        @foreach(Song s in Model)
+        {
+            <p>@s.SongName</p>
+        }
+    </div>
+</body>
+</html>
