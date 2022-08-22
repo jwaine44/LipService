@@ -1,0 +1,13 @@
+@model List<LipTweet>
+
+@foreach (LipTweet t in @Model)
+{
+
+    <a target="_blank" class="text-decoration-none text-secondary table-hover" href="https://twitter.com/@t.Author.User.Username/status/@t.Tweet.Id">
+        <div class="bordered border mb-2">
+            <p>@@@t.Author.User.Name</p>
+            <p>@t.Tweet.Text</p>
+        </div>
+
+    </a>
+}
