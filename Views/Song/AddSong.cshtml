@@ -1,3 +1,4 @@
+@model Song
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +11,19 @@
     <h1>Lip Service</h1>
     <h4>Add a new song here!</h4>
     <form class="shadow p-3 rounded" asp-controller = "Song" asp-action = "CreateSong" method = "POST">
-        
+        <div class="mb-3">
+            <label asp-for="SongName"></label>
+            <span asp-validation-for="SongName" class="text-danger font-weight-bold"></span>
+            <input asp-for="SongName">
+        </div>
+        <div class="mb-3">
+            <label asp-for="Lyrics"></label>
+            <span asp-validation-for="Lyrics" class="text-danger font-weight-bold"></span>
+            <div>
+                <textarea asp-for="Lyrics" style="height: 300px; width: 400px"></textarea>
+            </div>
+        </div>
+        <button class="btn btn-success">Add</button>
     </form>
 </body>
 </html>

@@ -119,11 +119,35 @@ public class SongController : Controller
     [HttpGet("/songs/new")]
     public IActionResult AddSong()
     {
-        if(!loggedIn)
-        {
-            return RedirectToAction("Index", "User");
-        }
+        // if(!loggedIn)
+        // {
+        //     return RedirectToAction("Index", "User");
+        // }
         return View("AddSong");
+    }
+
+    [HttpPost("/songs/create")]
+    public IActionResult CreateSong(Song newSong)
+    {
+        // if(!loggedIn)
+        // {
+        //     return RedirectToAction("Index", "User");
+        // }
+
+        if(ModelState.IsValid == false)
+        {
+            return AddSong();
+        }
+
+        if(uid != null)
+        {
+            newSong.UserId = (int)uid;
+        }
+        
+        _context.Songs.Add(newSong);
+        _context.SaveChanges();
+        
+        return RedirectToAction("Dashboard", "User");
     }
 
 }
