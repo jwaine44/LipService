@@ -1,4 +1,6 @@
-﻿<div>
+﻿@model Query
+
+<div>
       <h1>Welcome to Lip Service!</h1>
     <h4>Are you wondering who's tweeting about your songs? With our service, you can know!</h4>
     <p>Try it out here!</p>
@@ -14,5 +16,11 @@
     <partial name = "_Login"></partial>
 
     </div>
+
+
+</div>
+
+<div class="bordered border-black w-50">
+<a class="btn btn-success" asp-controller="Song" asp-action="GetTweets" asp-route-lyric="Cash Rule Everything Around Me">Cash Rule Everything Around Me</a>
 
 </div>
