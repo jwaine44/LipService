@@ -116,4 +116,14 @@ public class SongController : Controller
         return View("AllTweets", ListTweets);
     }
 
+    [HttpGet("/songs/new")]
+    public IActionResult AddSong()
+    {
+        if(!loggedIn)
+        {
+            return RedirectToAction("Index", "User");
+        }
+        return View("AddSong");
+    }
+
 }

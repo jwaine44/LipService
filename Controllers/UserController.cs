@@ -88,10 +88,10 @@ public class UserController : Controller
     [HttpGet("")]
     public IActionResult Index()
     {
-        // if(loggedIn)
-        // {
-        //     return RedirectToAction();
-        // }
+        if(loggedIn)
+        {
+            return RedirectToAction("Dashboard");
+        }
         
         return View("Index");
     }
@@ -121,7 +121,7 @@ public class UserController : Controller
         HttpContext.Session.SetInt32("uid", newUser.UserId);
         HttpContext.Session.SetString("Username", newUser.Username);
 
-        return RedirectToAction();
+        return RedirectToAction("Dashboard");
     }
 
     [HttpPost("/login")]
@@ -151,7 +151,7 @@ public class UserController : Controller
 
         HttpContext.Session.SetInt32("uid", dbUser.UserId);
         HttpContext.Session.SetString("Username", dbUser.Username);
-        return RedirectToAction();
+        return RedirectToAction("Dashboard");
     }
 
     [HttpPost("/logout")]
@@ -159,5 +159,11 @@ public class UserController : Controller
     {
         HttpContext.Session.Clear();
         return RedirectToAction("Index");
+    }
+
+    [HttpGet("/dashboard")]
+    public IActionResult Dashboard()
+    {
+        return View("Dashboard");
     }
 }
