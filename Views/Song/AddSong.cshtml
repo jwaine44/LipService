@@ -8,8 +8,7 @@
     <title>Lip Service</title>
 </head>
 <body>
-    <h1 class ="text-center">Lip Service</h1>
-    <h4 class ="text-center">Add a new song here!</h4>
+    <h1 class ="text-center">Add a new song here!</h1>
     <form class="shadow p-3 rounded" asp-controller = "Song" asp-action = "CreateSong" method = "POST">
         <div class="mb-3">
             <label asp-for="SongName" style="font-size: 20px"></label>
@@ -20,7 +19,7 @@
             <label asp-for="Lyrics" style="font-size: 20px"></label>
             <span asp-validation-for="Lyrics" class="text-danger font-weight-bold"></span>
             <div>
-                <textarea asp-for="Lyrics" style="padding-bottom: 300px; width: 400px; font-family: Arial"></textarea>
+                <textarea asp-for="Lyrics" class="txtarea"></textarea>
             </div>
         </div>
         <button class="btn btn-success">Add</button>

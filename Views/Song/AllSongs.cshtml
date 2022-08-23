@@ -8,12 +8,11 @@
     <title>Lip Service</title>
 </head>
 <body>
-    <h1 class ="text-center">Lip Service</h1>
-    <h4 class ="text-center">Here are all your songs!</h4>
+    <h1 class ="text-center">Here are all your songs!</h1>
     <div class="d-flex justify-content-around">
         @foreach(Song s in Model)
         {
-            <a asp-controller="Song" asp-action="OneSong" asp-route-songId="@s.SongId"><p>@s.SongName</p></a>
+            <a asp-controller="Song" asp-action="OneSong" asp-route-songId="@s.SongId"><button class = "btn-song-class">@s.SongName</button></a>
         }
     </div>
 </body>

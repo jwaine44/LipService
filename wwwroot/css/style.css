@@ -1,3 +1,52 @@
 * {
     font-family: "Arista";
 }
+
+.my-btn-class{
+    background-color: black;
+    color: white;
+}
+
+.my-btn-class:hover{
+    background-color: skyblue;
+    color: black;
+}
+
+.sky {
+    background-color: skyblue;
+}
+
+.big-btn {
+    width: 250px;
+    height: 100px;
+    font-size: 30px;
+}
+
+.txtarea {
+    height: 300px; 
+    width: 400px; 
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.btn-song-class {
+    margin-top: 30px;
+    font-size: 20px;
+    width: 250px;
+    height: 100px;
+    background-color: skyblue;
+    border-radius: 5%;
+}
+
+.btn-song-class:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-lyric:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-lyric {
+    background-color: rgb(42, 178, 231);
+}

@@ -1,6 +1,7 @@
 @model Song
 
-<h1>@Model.SongName</h1>
+<h1 class ="text-center">@Model.SongName</h1>
+<h4 class ="text-center mt-4 mb-4">Click on one of the buttons below for a list of tweets containing that lyric!</h4>
 
 @{
     string songLine = "";
@@ -10,18 +11,18 @@
 }
 @foreach (List<string> lyricSublist in ViewBag.LyricsList)
 {
-    Console.WriteLine(lyricSublist.Count);
-        foreach(string lyric in lyricSublist)
-        {
-            @* Inside of array of 9 words *@
+    foreach(string lyric in lyricSublist)
+    {
+        @* Inside of array of 9 words *@
 
-            songLine += (lyric + " ");
-           
-        }
+        songLine += (lyric + " ");
+    }
 
     query = songLine.Replace("and", " ").Replace("And", " ");
-    <div class="d-flex w-75">
-   <a class="btn btn-success mb-2" asp-controller="Song" asp-action="GetTweets" asp-route-lyric="@query">@songLine</a>
+
+    <div class="d-flex w-75 ">
+        <a class="btn btn-success mb-2 btn-lyric" asp-controller="Song" asp-action="GetTweets" asp-route-lyric="@query">@songLine</a>
     </div>
+    
     songLine = "";
 }

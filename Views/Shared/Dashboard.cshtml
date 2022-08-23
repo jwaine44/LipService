@@ -7,12 +7,11 @@
     <title>Lip Service</title>
 </head>
 <body>
-    <h1 class ="text-center">Lip Service</h1>
-    <h4 class ="text-center">Welcome, @Context.Session.GetString("Username")</h4>
+    <h1 class ="text-center">Welcome, @Context.Session.GetString("Username")</h1>
     <div class="d-flex justify-content-around mt-5">
-        <a asp-controller = "Song" asp-action = "AddSong"><button class = "btn btn-dark btn-lg" style= "width: 200px; height: 50px">Add a Song</button></a>
+        <a asp-controller = "Song" asp-action = "AddSong"><button class = "btn btn-dark btn-lg big-btn">Add a Song</button></a>
 
-        <a asp-controller = "Song" asp-action = "AllSongs"><button class = "btn btn-dark btn-lg">Uploaded Songs</button></a>
+        <a asp-controller = "Song" asp-action = "AllSongs"><button class = "btn btn-dark btn-lg big-btn">Uploaded Songs</button></a>
     </div>
 </body>
 </html>
