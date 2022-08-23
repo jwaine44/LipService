@@ -1,18 +1,19 @@
 ﻿@model Query
 
 <div>
-    <h1>Welcome to Lip Service!</h1>
-    <h4>Are you wondering who's tweeting about your songs? With our service, you can know!</h4>
-    <p>Try it out here!</p>
-    <p>Click the lyric below to be shown who's tweeting those lyrics:</p>
-    <div class="bordered border-black w-50">
-    <a class="btn btn-success" asp-controller="Song" asp-action="GetTweets" asp-route-lyric="First things first rest in peace Uncle Phil">First things first rest in peace Uncle Phil</a>
+    <h1 class ="text-center">Welcome to Lip Service!</h1>
+    <h4 class ="text-center">Are you wondering who's tweeting about your songs? With our service, you can know!</h4>
 </div>
-<div class="d-flex justify-content-around">
-    <div class="w-50">
+<div class="d-flex justify-content-around mt-5">
+    <div class="col">
+        <h5>Try it out here!</h5>
+        <p>Click the lyric below to see who's tweeting those lyrics:</p>
+        <a class="btn btn-success" asp-controller="Song" asp-action="GetTweets" asp-route-lyric="First things first rest in peace Uncle Phil" style="font-family: Arial; font-weight: bold">First things first rest in peace Uncle Phil</a>
+    </div>
+    <div class="col">
         <partial name = "_Register"></partial>
     </div>
-    <div class="w-50 ms-3">
+    <div class="col ms-3">
         <partial name = "_Login"></partial>
     </div>
 </div>
