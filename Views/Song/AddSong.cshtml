@@ -13,13 +13,15 @@
         <div class="mb-3">
             <label asp-for="SongName" style="font-size: 20px"></label>
             <span asp-validation-for="SongName" class="text-danger font-weight-bold"></span>
-            <input asp-for="SongName" style="font-family: Arial">
+            <div>
+                <input asp-for="SongName" style="font-family: Arial">
+            </div>
         </div>
         <div class="mb-3">
             <label asp-for="Lyrics" style="font-size: 20px"></label>
             <span asp-validation-for="Lyrics" class="text-danger font-weight-bold"></span>
             <div>
-                <textarea asp-for="Lyrics" class="txtarea"></textarea>
+                <textarea asp-for="Lyrics"></textarea>
             </div>
         </div>
         <button class="btn btn-success">Add</button>
