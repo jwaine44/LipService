@@ -8,23 +8,37 @@
     <title>Lip Service</title>
 </head>
 <body>
-    <h1 class ="text-center">Add a new song here!</h1>
-    <form class="shadow p-3 rounded" asp-controller = "Song" asp-action = "CreateSong" method = "POST">
-        <div class="mb-3">
-            <label asp-for="SongName" style="font-size: 20px"></label>
-            <span asp-validation-for="SongName" class="text-danger font-weight-bold"></span>
-            <div>
-                <input asp-for="SongName" style="font-family: Arial">
-            </div>
+    <div class="d-flex justify-content-between w-100">
+        <div class="w-50 mr-5" id="left">
+            <h1 class ="text-center mb-3">Add a new song here!</h1>
+            <form class="shadow p-3 rounded" asp-controller = "Song" asp-action = "CreateSong" method = "POST">
+                <div class="mb-3">
+                    <label asp-for="SongName" style="font-size: 20px"></label>
+                    <span asp-validation-for="SongName" class="text-danger font-weight-bold"></span>
+                    <div>
+                        <input asp-for="SongName" style="font-family: Arial">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Lyrics" style="font-size: 20px"></label>
+                    <span asp-validation-for="Lyrics" class="text-danger font-weight-bold"></span>
+                    <div>
+                        <textarea asp-for="Lyrics"></textarea>
+                    </div>
+                </div>
+                <button class="btn btn-lyric">Add</button>
+            </form>
         </div>
-        <div class="mb-3">
-            <label asp-for="Lyrics" style="font-size: 20px"></label>
-            <span asp-validation-for="Lyrics" class="text-danger font-weight-bold"></span>
-            <div>
-                <textarea asp-for="Lyrics"></textarea>
+        <div class="w-75  ms-5"   id="right">
+                <h1 class ="text-center mb-5">Directions:</h1>
+            <div class="mt-5" style="border: 2px solid rgb(42, 178, 231)">
+                <h4 class ="text-center p-4 ">Enter in the title of your song in the name field.</h4>
+                <h4 class ="text-center p-4">Copy and paste your lyrics into the lyrics field.</h4>
+                <h4 class ="text-center p-4">Lip Service will format your lyrics into searchable lines.</h4>
+                <h4 class ="text-center p-4">After clicking <span class="btn btn-lyric" style="cursor: default;">Add</span>  you will be taken to a page where you can click a line in your song and see who's tweeting your lyrics!</h4>
             </div>
+
         </div>
-        <button class="btn btn-success">Add</button>
-    </form>
+    </div>
 </body>
 </html>

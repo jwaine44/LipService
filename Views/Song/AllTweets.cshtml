@@ -1,14 +1,28 @@
 @model List<LipTweet>
 
-@foreach (LipTweet t in @Model)
-{
-    <div class="d-flex justify-content-center">
-        <a target="_blank" class="text-decoration-none text-secondary table-hover" href="https://twitter.com/@t.Author.User.Username/status/@t.Tweet.Id">
-            <div class="bordered border mb-3 shadow p-3 rounded tweet">
-                <p class="tweettxt" style="font-weight: bold;">@@@t.Author.User.Username</p>
-                <p class="tweettxt">@t.Tweet.Text</p>
-                <p class="tweetdate">@t.Tweet.CreatedAt.LocalDateTime</p>
-            </div>
-        </a>
-    </div>
-}
+<h1 class="d-flex justify-content-center">All Tweets</h1>
+
+<div class="d-flex flex-wrap justify-content-center">
+    @foreach (LipTweet t in @Model)
+    {
+        <div class="d-flex justify-content-center ms-5">
+            <a target="_blank" class="text-decoration-none text-secondary tweethover" href="https://twitter.com/@t.Author.User.Username/status/@t.Tweet.Id">
+                <div class="bordered border mb-3 shadow p-3 rounded tweet">
+                    <div class="d-flex align-content-center">
+                        <div>
+                            <img class="rounded-circle" src="@t.Author.User.ProfileImageUrl" alt="">
+                        </div>
+                        <div>
+                            <p class="tweettxt mb-0 ms-2" style="font-weight: bold;">@@@t.Author.User.Username</p>
+                            <p class="tweettxt  ms-4" >@t.Author.User.Name</p>
+                        </div>
+                    </div>
+                    <p class="tweettxt">@t.Tweet.Text</p>
+                    <p class="tweetdate">@t.Tweet.CreatedAt.LocalDateTime</p>
+                    <p class="d-flex justify-content-center border">Click to interact on Twitter.com!</p>
+                </div>
+            </a>
+        </div>
+    }
+
+</div>

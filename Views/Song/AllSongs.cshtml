@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 class ="text-center">Here are all your songs!</h1>
-    <div class="d-flex justify-content-around">
+    <div class="d-flex justify-content-around flex-wrap">
         @foreach(Song s in Model)
         {
             <a asp-controller="Song" asp-action="OneSong" asp-route-songId="@s.SongId"><button class = "btn-song-class">@s.SongName</button></a>
