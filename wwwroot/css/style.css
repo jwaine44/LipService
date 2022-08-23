@@ -22,6 +22,10 @@
     font-size: 30px;
 }
 
+.big-btn:hover {
+    background-color: skyblue;
+}
+
 .txtarea {
     height: 300px; 
     width: 400px; 
@@ -33,12 +37,13 @@
     font-size: 20px;
     width: 250px;
     height: 100px;
-    background-color: skyblue;
+    background-color: black;
     border-radius: 5%;
+    color: white;
 }
 
 .btn-song-class:hover {
-    background-color: black;
+    background-color: skyblue;
     color: white;
 }
 
@@ -49,4 +54,22 @@
 
 .btn-lyric {
     background-color: rgb(42, 178, 231);
+    color: white;
 }
+
+.tweettxt {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.tweetdate {
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+.tweet {
+    width: 450px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 10px;
+}
+

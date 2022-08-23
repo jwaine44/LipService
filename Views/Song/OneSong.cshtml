@@ -21,7 +21,7 @@
     query = songLine.Replace("and", " ").Replace("And", " ");
 
     <div class="d-flex w-75 ">
-        <a class="btn btn-success mb-2 btn-lyric" asp-controller="Song" asp-action="GetTweets" asp-route-lyric="@query">@songLine</a>
+        <a class="btn btn-lyric mb-2" asp-controller="Song" asp-action="GetTweets" asp-route-lyric="@query">@songLine</a>
     </div>
     
     songLine = "";

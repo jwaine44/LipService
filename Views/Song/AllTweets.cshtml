@@ -2,12 +2,13 @@
 
 @foreach (LipTweet t in @Model)
 {
-
-    <a target="_blank" class="text-decoration-none text-secondary table-hover" href="https://twitter.com/@t.Author.User.Username/status/@t.Tweet.Id">
-        <div class="bordered border mb-2">
-            <p>@@@t.Author.User.Username</p>
-            <p>@t.Tweet.Text</p>
-        </div>
-
-    </a>
+    <div class="d-flex justify-content-center">
+        <a target="_blank" class="text-decoration-none text-secondary table-hover" href="https://twitter.com/@t.Author.User.Username/status/@t.Tweet.Id">
+            <div class="bordered border mb-3 shadow p-3 rounded tweet">
+                <p class="tweettxt" style="font-weight: bold;">@@@t.Author.User.Username</p>
+                <p class="tweettxt">@t.Tweet.Text</p>
+                <p class="tweetdate">@t.Tweet.CreatedAt.LocalDateTime</p>
+            </div>
+        </a>
+    </div>
 }
