@@ -1,3 +1,13 @@
 * {
     font-family: "Arista";
 }
+
+.my-btn-class{
+    background-color: black;
+    color: white;
+}
+
+.my-btn-class:hover{
+    background-color: skyblue;
+    color: black;
+}
