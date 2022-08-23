@@ -10,6 +10,7 @@
 .my-btn-class:hover{
     background-color: skyblue;
     color: black;
+<<<<<<< HEAD
 }
 
 .sky {
@@ -49,4 +50,6 @@
 
 .btn-lyric {
     background-color: rgb(42, 178, 231);
+=======
+>>>>>>> 91c213d6a043e8efd698b254304dedbf7ab97833
 }
