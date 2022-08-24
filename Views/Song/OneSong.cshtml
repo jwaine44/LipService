@@ -3,26 +3,31 @@
     string songLine = "";
     @* Complete line of the song *@
     string query = "";
+    @* Will hold the line of the song, minus the 'ands' which conflict with the API Call *@
 }
 
 <div class="w-100 d-flex justify-content-around">
     <div class="mr-5" id="left">
         <h1 class ="text-center mb-5">@Model.SongName</h1>
         <div class="w-100">
+
+            @* Begins the loop through the 2-D Array passed through in SongController.cs OneSong route *@
             @foreach (List<string> lyricSublist in ViewBag.LyricsList)
             {
+                @* Begins looping through the list of 9 words stored in the 2-D Array *@
                 foreach(string lyric in lyricSublist)
                 {
-                    @* Inside of array of 9 words *@
+                    @* Adds each word to the songLine, + an empty space *@
                     songLine += (lyric + " ");
                 }
 
+                @* Once the songline is holding all 9 words, query holds that song line minus the 'ands' *@
                 query = songLine.Replace("and", " ").Replace("And", " ");
 
-                <div class="d-flex w-100 mr-5">
+                <div class="d-flex w-100 mr-5">                                                             @*query gets passed into the route, songLine gets displayed on the page*@
                     <a class="btn btn-lyric mb-2" asp-controller="Song" asp-action="GetTweets" asp-route-lyric="@query" asp-route-songId="@Model.SongId">@songLine</a>
                 </div>
-                
+                @* Resets the songLine to empty before starting the next one. *@
                 songLine = "";
             }
         </div>
