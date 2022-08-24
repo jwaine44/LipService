@@ -144,8 +144,8 @@ public class SongController : Controller
         return View("OneSong", dbSong);
     }
 
-    [HttpGet("/get/tweets/{lyric}")]
-    public async Task<IActionResult> GetTweets(string lyric){
+    [HttpGet("/get/tweets/{lyric}/{songId}")]
+    public async Task<IActionResult> GetTweets(string lyric, int songId){
         Query newQuery = new Query();
         newQuery.Lyric = lyric;
 
@@ -153,6 +153,11 @@ public class SongController : Controller
 
         var tweetList = await UserClient.SearchV2.SearchTweetsAsync(newQuery.Lyric);
         
+        if(tweetList.Tweets.Length == 0){
+
+            return RedirectToAction("OneSong", new {songId = songId});
+        }
+
         List<LipTweet> ListTweets = new List<LipTweet>();
 
         foreach (var tweet in tweetList.Tweets)
