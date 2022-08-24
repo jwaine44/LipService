@@ -5,10 +5,12 @@
 .my-btn-class{
     background-color: black;
     color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .my-btn-class:hover{
-    background-color: skyblue;
+    background-color: rgb(42, 178, 231);
     color: black;
 }
 
@@ -23,7 +25,7 @@
 }
 
 .big-btn:hover {
-    background-color: skyblue;
+    background-color: rgb(42, 178, 231);
 }
 
 textarea {
@@ -43,7 +45,7 @@ textarea {
 }
 
 .btn-song-class:hover {
-    background-color: skyblue;
+    background-color: rgb(42, 178, 231);
     color: white;
 }
 
@@ -54,7 +56,7 @@ textarea {
 
 .btn-lyric {
     background-color: rgb(42, 178, 231);
-    color: white;
+    color: black;
 }
 
 .tweettxt {
@@ -73,3 +75,7 @@ textarea {
     border-radius: 10px;
 }
 
+.tweethover:hover{
+   border-top: 4px solid rgb(42, 178, 231);
+   border-radius: 5px;
+}

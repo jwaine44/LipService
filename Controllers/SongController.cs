@@ -199,7 +199,7 @@ public class SongController : Controller
         // newSong.Lyrics.Trim();
         // Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         // Console.WriteLine(newSong.Lyrics);
-
+        
         if(uid != null)
         {
             newSong.UserId = (int)uid;
@@ -207,7 +207,7 @@ public class SongController : Controller
         _context.Songs.Add(newSong);
         _context.SaveChanges();
         
-        return RedirectToAction("Dashboard", "User");
+        return RedirectToAction("OneSong", new {songId = newSong.SongId});
     }
 
 
