@@ -9,9 +9,28 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+
 .my-btn-class:hover{
     background-color: rgb(42, 178, 231);
     color: black;
+}
+
+
+.logout{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 5px;
+}
+
+
+
+.logout:hover{
+    background-color: white;
+    color: black;
+    margin-right: 5px;
 }
 
 .sky {
