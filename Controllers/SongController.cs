@@ -148,11 +148,16 @@ public class SongController : Controller
     public async Task<IActionResult> GetTweets(string lyric, int songId){
         Query newQuery = new Query();
         newQuery.Lyric = lyric;
+        Console.WriteLine(newQuery.Lyric, "++++++++++++++++++++++++++++++++++++");
 
         TwitterClient UserClient = new TwitterClient(ApiKey, SecretKey, AccessToken, SecretAccess);
 
         var tweetList = await UserClient.SearchV2.SearchTweetsAsync(newQuery.Lyric);
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 0f66b2a40303bb602a4ffea83bac5ca012d82acb
         if(tweetList.Tweets.Length == 0){
 
             return RedirectToAction("OneSong", new {songId = songId});

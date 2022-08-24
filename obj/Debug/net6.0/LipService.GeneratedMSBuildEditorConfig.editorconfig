@@ -8,6 +8,7 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LipService
 build_property.RootNamespace = LipService
+<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\jwain\Documents\Coding\C#\LipService\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
@@ -68,5 +69,67 @@ build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/jwain/Documents/Coding/C\#/LipService/Views/Shared/_Layout.cshtml]
+=======
+build_property.ProjectDir = c:\Users\adams\Desktop\CodingDojo\CodingDojoAssignments\LipService\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\adams\Desktop\CodingDojo\CodingDojoAssignments\LipService
+build_property._RazorSourceGeneratorDebug = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Shared/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Shared/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Shared/_Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Shared/_Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Song/AddSong.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1xBZGRTb25nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Song/AllSongs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1xBbGxTb25ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Song/AllTweets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1xBbGxUd2VldHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Song/OneSong.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1xPbmVTb25nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/adams/Desktop/CodingDojo/CodingDojoAssignments/LipService/Views/Shared/_Layout.cshtml]
+>>>>>>> 0f66b2a40303bb602a4ffea83bac5ca012d82acb
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7ywiddwnc0
