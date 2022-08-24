@@ -76,6 +76,6 @@ textarea {
 }
 
 .tweethover:hover{
-   border-top: 4px solid rgb(42, 178, 231);
-   border-radius: 5px;
+    border-top: 4px solid rgb(42, 178, 231);
+    border-radius: 5px;
 }
