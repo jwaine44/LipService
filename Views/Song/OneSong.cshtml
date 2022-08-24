@@ -3,8 +3,8 @@
     string songLine = "";
     @* Complete line of the song *@
     string query = "";
-
 }
+
 <div class="w-100 d-flex justify-content-around">
     <div class="mr-5" id="left">
         <h1 class ="text-center mb-5">@Model.SongName</h1>
@@ -14,7 +14,6 @@
                 foreach(string lyric in lyricSublist)
                 {
                     @* Inside of array of 9 words *@
-
                     songLine += (lyric + " ");
                 }
 
@@ -29,13 +28,12 @@
         </div>
     </div>
     <div class=" w-50 ms-5" id="right">
-            <h1 class ="text-center mb-5">Directions: </h1>
+        <h1 class ="text-center mb-5">Directions: </h1>
         <div class="mx-auto p-3" style="border: 2px solid rgb(42, 178, 231)">
             <h4 class ="text-right mt-4 mb-4">Click one of the lines from your song to get all recent tweets containing that lyric!</h4>
-            <h4 class ="text-right mt-4 mb-4">LipService will start to search for tweets containing that text</h4>
-            <h4 class ="text-right mt-4 mb-4"> <span style="color:rgb(42, 178, 231) ;">* </span>This may take awhile if there are a lot of tweets to retrieve.</h4>
+            <h4 class ="text-right mt-4 mb-4">LipService will start to search for tweets containing that text.</h4>
+            <h4 class ="text-right mt-4 mb-4"> <span style="color:rgb(42, 178, 231);">* </span>This may take awhile if there are a lot of tweets to retrieve.</h4>
             <h4 class ="text-right mt-4 mb-4">If there are no tweets found you'll have to try another line.</h4>
-
         </div>
     </div>
 </div>

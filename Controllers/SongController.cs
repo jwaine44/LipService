@@ -96,30 +96,37 @@ public class SongController : Controller
     [HttpGet("/songs")]
     public IActionResult AllSongs()
     {
-        // if(!loggedIn)
-        // {
-        //     return RedirectToAction("Index", "User");
-        // }
-
-        List<Song> allSongs = _context.Songs.ToList();
+        if(!loggedIn)
+        {
+            return RedirectToAction("Index", "User");
+        }
+    
+        List<Song> allSongs = _context.Songs.Where(s => s.Artist.UserId == uid).ToList();
 
         return View("AllSongs", allSongs);
     }
 
     [HttpGet("/songs/{songId}")]
-    public IActionResult OneSong(int songId){
+    public IActionResult OneSong(int songId)
+    {
+        if(!loggedIn)
+        {
+            return RedirectToAction("Index", "User");
+        }
+
         Song? dbSong = _context.Songs.FirstOrDefault(s => s.SongId == songId);
 
         if(dbSong == null){
             return RedirectToAction("AllSongs");
         }
+
         string temp = "";
         char space = ' ';
         List<List<string>> lyricsList = new List<List<string>>();
         List<string> lyricsSubList = new List<string>();
 
-
-        for(int i = 0; i< dbSong.Lyrics.Length; i++){
+        for(int i = 0; i < dbSong.Lyrics.Length; i++)
+        {
             if(dbSong.Lyrics[i] == space)
             {
                 lyricsSubList.Add(temp);
@@ -131,7 +138,8 @@ public class SongController : Controller
                 temp = "";
                 i++;
             }
-            if(i == dbSong.Lyrics.Length -1)
+
+            if(i == dbSong.Lyrics.Length - 1)
             {
                 temp += dbSong.Lyrics[i];
                 lyricsSubList.Add(temp);
@@ -145,17 +153,17 @@ public class SongController : Controller
     }
 
     [HttpGet("/get/tweets/{lyric}/{songId}")]
-    public async Task<IActionResult> GetTweets(string lyric, int songId){
+    public async Task<IActionResult> GetTweets(string lyric, int songId)
+    {
         Query newQuery = new Query();
         newQuery.Lyric = lyric;
-        Console.WriteLine(newQuery.Lyric, "++++++++++++++++++++++++++++++++++++");
 
         TwitterClient UserClient = new TwitterClient(ApiKey, SecretKey, AccessToken, SecretAccess);
 
         var tweetList = await UserClient.SearchV2.SearchTweetsAsync(newQuery.Lyric);
 
-        if(tweetList.Tweets.Length == 0){
-
+        if(tweetList.Tweets.Length == 0)
+        {
             return RedirectToAction("OneSong", new {songId = songId});
         }
 
@@ -169,9 +177,7 @@ public class SongController : Controller
             newLipTweet.Tweet = newTweet;
             newLipTweet.Author = author;
             ListTweets.Add(newLipTweet);
-
         }
-
 
         return View("AllTweets", ListTweets);
     }
@@ -179,42 +185,39 @@ public class SongController : Controller
     [HttpGet("/songs/new")]
     public IActionResult AddSong()
     {
-        // if(!loggedIn)
-        // {
-        //     return RedirectToAction("Index", "User");
-        // }
+        if(!loggedIn)
+        {
+            return RedirectToAction("Index", "User");
+        }
+
         return View("AddSong");
     }
 
-
 // -------------------------------------POST ROUTES-------------------------------------
+
     [HttpPost("/songs/create")]
     public IActionResult CreateSong(Song newSong)
     {
-        // if(!loggedIn)
-        // {
-        //     return RedirectToAction("Index", "User");
-        // }
+        if(!loggedIn)
+        {
+            return RedirectToAction("Index", "User");
+        }
 
         if(ModelState.IsValid == false)
         {
             return AddSong();
         }
-        // Console.WriteLine(newSong.Lyrics);
-        newSong.Lyrics = newSong.Lyrics.Replace("\n", "").Replace("\r", " ").Replace("\r\n", "");
-        // newSong.Lyrics.Trim();
-        // Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        // Console.WriteLine(newSong.Lyrics);
         
+        newSong.Lyrics = newSong.Lyrics.Replace("\n", "").Replace("\r", " ").Replace("\r\n", "");
+                
         if(uid != null)
         {
             newSong.UserId = (int)uid;
         }
+
         _context.Songs.Add(newSong);
         _context.SaveChanges();
         
         return RedirectToAction("OneSong", new {songId = newSong.SongId});
     }
-
-
 }

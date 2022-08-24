@@ -164,6 +164,11 @@ public class UserController : Controller
     [HttpGet("/dashboard")]
     public IActionResult Dashboard()
     {
+        if(!loggedIn)
+        {
+            return RedirectToAction("Index");
+        }
+
         return View("Dashboard");
     }
 }
