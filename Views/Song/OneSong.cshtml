@@ -3,7 +3,7 @@
     string songLine = "";
     @* Complete line of the song *@
     string query = "";
-    @* Will hold the line of the song, minus the 'ands' which conflict with the API Call *@
+    @* Will hold the line of the song minus the 'ands' which conflict with the API call *@
 }
 
 <div class="w-100 d-flex justify-content-around">
@@ -21,11 +21,11 @@
                     songLine += (lyric + " ");
                 }
 
-                @* Once the songline is holding all 9 words, query holds that song line minus the 'ands' *@
+                @* Once the songLine is holding all 9 words, query holds that songLine minus the 'ands' *@
                 query = songLine.Replace("and", " ").Replace("And", " ");
 
                 <div class="d-flex w-100 mr-5"> 
-                    @*query gets passed into the route, songLine gets displayed on the page*@
+                    @* Query gets passed into the route, songLine gets displayed on the page *@
                     <a class="btn btn-lyric mb-2" asp-controller="Song" asp-action="GetTweets" asp-route-lyric="@query" asp-route-songId="@Model.SongId">@songLine</a>
                 </div>
                 @* Resets the songLine to empty before starting the next one. *@
