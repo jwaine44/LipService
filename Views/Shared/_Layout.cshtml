@@ -24,7 +24,12 @@
                             <a class="btn logout" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class = "nav-item">
-                            <form asp-controller = "User" asp-action = "Logout" method = "POST"><button class = "btn logout">Logout</button></form>
+                            @{
+                                if(Context.Session.GetInt32("uid") != null)
+                                {
+                                    <form asp-controller = "User" asp-action = "Logout" method = "POST"><button class = "btn logout">Logout</button></form>
+                                }
+                            }
                         </li>
                     </ul>
                 </div>
